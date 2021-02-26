@@ -556,7 +556,7 @@ impl<'a, R: Rng + ?Sized> Iterator for HMMSampleIter<'a, R> {
 /// The item yielded by the `HMMFilterIter`.
 #[derive(Clone, Debug, PartialEq)]
 pub struct HMMFilterItem {
-    p_states: Array1<f64>, // The probability that we are in each state currently
+    pub p_states: Array1<f64>, // The probability that we are in each state currently
 }
 
 /// This is an iterator returned by `HMM::filter`.
